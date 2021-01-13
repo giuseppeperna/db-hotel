@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 13, 2021 at 03:12 PM
+-- Generation Time: Jan 13, 2021 at 03:26 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -105,6 +105,7 @@ ALTER TABLE `ospiti`
 --
 ALTER TABLE `prenotazioni`
   ADD PRIMARY KEY (`st_id`,`osp_id`),
+  ADD UNIQUE KEY `pren_codice` (`pren_codice`),
   ADD KEY `osp_id` (`osp_id`),
   ADD KEY `st_id` (`st_id`);
 
