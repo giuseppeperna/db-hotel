@@ -103,3 +103,11 @@ FROM `ospiti`
 WHERE `document_type` = 'Driver License'
 AND YEAR(date_of_birth) = 1975;
 
+
+
+8) ● Quanti paganti sono anche ospiti?:
+
+SELECT COUNT(ospite_id)
+FROM `paganti`
+WHERE `ospite_id` IS NOT NULL;
+
