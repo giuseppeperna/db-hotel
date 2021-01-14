@@ -4,12 +4,14 @@ SELECT `name`, `lastname`, `document_type`
 FROM `ospiti`
 WHERE `document_type` = "CI";
 
+
 2) ● Seleziona tutti gli ospiti che sono nati dopo il 1988:
 
 SELECT `name`, `lastname`, `document_type`, `date_of_birth`
 FROM `ospiti`
 WHERE `date_of_birth` > '1988-12-31'
 ORDER BY `date_of_birth` DESC;
+
 
 3) ● Seleziona tutti gli ospiti che hanno più di 20 anni (al momento dell’esecuzione della query):
 
@@ -26,6 +28,7 @@ GROUP BY
 SELECT COUNT(*), YEAR(date_of_birth)
 from `ospiti`
 GROUP BY YEAR(date_of_birth);
+
 
 2) ● Somma i prezzi dei pagamenti raggruppandoli per status:
 
@@ -71,7 +74,6 @@ AND MONTH(pg.created_at) = 5
 AND `status` = 'accepted';
 
 
-
 BONUS
 
 
@@ -104,10 +106,15 @@ WHERE `document_type` = 'Driver License'
 AND YEAR(date_of_birth) = 1975;
 
 
-
 8) ● Quanti paganti sono anche ospiti?:
 
 SELECT COUNT(ospite_id)
 FROM `paganti`
 WHERE `ospite_id` IS NOT NULL;
+
+
+9) ● Quanti posti letto ha l’hotel in totale?
+
+SELECT SUM(beds)
+FROM `stanze`;
 
