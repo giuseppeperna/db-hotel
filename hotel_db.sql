@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 13, 2021 at 03:26 PM
+-- Generation Time: Jan 14, 2021 at 09:24 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -64,8 +64,8 @@ CREATE TABLE `prenotazioni` (
 --
 
 INSERT INTO `prenotazioni` (`st_id`, `osp_id`, `pren_check_in`, `pren_check_out`, `pren_mod_pagamento`, `pren_codice`) VALUES
-(1, 2, '2021-01-01 16:10:42', '2021-01-14 16:10:42', 'Carta di Credito', 'XB589677'),
-(2, 1, '2021-01-02 16:11:35', '2021-01-18 16:11:35', 'Contanti', 'XS896532');
+(1, 1, '2021-01-02 16:11:35', '2021-01-18 16:11:35', 'Contanti', 'XB589677'),
+(1, 2, '2021-01-01 16:10:42', '2021-01-14 16:10:42', '', 'XB589677');
 
 -- --------------------------------------------------------
 
@@ -105,7 +105,6 @@ ALTER TABLE `ospiti`
 --
 ALTER TABLE `prenotazioni`
   ADD PRIMARY KEY (`st_id`,`osp_id`),
-  ADD UNIQUE KEY `pren_codice` (`pren_codice`),
   ADD KEY `osp_id` (`osp_id`),
   ADD KEY `st_id` (`st_id`);
 
