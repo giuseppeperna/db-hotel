@@ -72,7 +72,15 @@ AND `status` = 'accepted';
 
 
 
+BONUS
 
+
+4) ● Seleziona tutti gli ospiti il cui nome inizia con la D:
+
+SELECT *
+FROM `ospiti`
+WHERE `name` LIKE 'D%'
+ORDER BY `name` ASC;
 
 
 
