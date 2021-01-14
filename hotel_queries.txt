@@ -89,3 +89,10 @@ SELECT COUNT(id), `status`
 FROM `pagamenti`
 WHERE `status`= 'accepted';
 
+
+
+6) ● Qual è il prezzo massimo pagato?:
+
+SELECT MAX(price)
+FROM `pagamenti`;
+
