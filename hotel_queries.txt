@@ -63,7 +63,7 @@ ON prenotazioni_has_ospiti.ospite_id = ospiti.id;
 3) ● Stampare Nome, Cognome, Prezzo e Pagante per tutte le prenotazioni fatte a Maggio 2018:
 
 SELECT *
-FROM `pagamenti` pg
+FROM `pagamenti` AS pg
 INNER JOIN `paganti`
 ON paganti.id = pg.pagante_id
 WHERE YEAR(pg.created_at) = 2018
